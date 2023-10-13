@@ -115,7 +115,8 @@ pub fn build() -> Result<EspIdfBuildOutput> {
         let (install_dir, is_default_install_dir) = config.esp_idf_tools_install_dir()?;
         // EspIdf must come from the environment if `esp_idf_tools_install_dir` == `fromenv`.
         let require_from_env = install_dir.is_from_env();
-        let maybe_from_env = require_from_env || is_default_install_dir;
+        // let maybe_from_env = require_from_env || is_default_install_dir;
+        let maybe_from_env = false;
 
         // Closure to install the esp-idf using `embuild::espidf::Installer`.
         let install = |esp_idf_origin: EspIdfOrigin| -> Result<(espidf::EspIdf, InstallDir)> {
