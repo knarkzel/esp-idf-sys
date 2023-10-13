@@ -35,7 +35,7 @@ build-time = "0.1"   # For esp_app_desc!()
 const_format = "0.2" # For esp_app_desc!()
 
 [build-dependencies]
-embuild = { version = "0.31.3", features = ["glob", "kconfig"] }
+embuild = { git = "https://github.com/knarkzel/embuild.git", rev = "5292871f5b3a0a78f398f80e8c159f47afb1df87" ,features = ["glob", "kconfig"] }
 anyhow = "1"
 regex = "1.5"
 bindgen = "0.63"
